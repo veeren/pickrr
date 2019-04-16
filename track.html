@@ -1,4 +1,6 @@
-var jqxhr = $.ajax( "http://www.pickrr.com/api/tracking-json/?tracking_id=59612656246" )
+<script>
+$( document ).ready(function() {
+            var jqxhr = $.ajax( "http://www.pickrr.com/api/tracking-json/?tracking_id=59612656246" )
             .done(function(data) {
                 alert( "success" );
                 $('p').text(JSON.stringify(data));
@@ -10,3 +12,7 @@ var jqxhr = $.ajax( "http://www.pickrr.com/api/tracking-json/?tracking_id=596126
             .always(function() {
                 alert( "complete" );
             });
+   
+});
+
+</script>
