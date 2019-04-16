@@ -1,16 +1,23 @@
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
-<h2>This is the place to have a message</h2>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+                
 <script>
 $( document ).ready(function() {
             var jqxhr = $.ajax( "http://www.pickrr.com/api/tracking-json/?tracking_id=59612656246" )
             .done(function(data) {
                 alert( "success" );
-                $('p').text(JSON.stringify(data));
+                $('h2').text(JSON.stringify(data));
             })
             .fail(function(error) {
                 alert( "error" );
-                $('p').text(JSON.stringify(error));
+                $('h2').text(JSON.stringify(error));
             })
             .always(function() {
                 alert( "complete" );
@@ -19,3 +26,12 @@ $( document ).ready(function() {
 });
 
 </script>
+
+    </head>
+    <body>
+    <h2>This is the place to have a message</h2>
+    </body>
+</html>
+
+
+
